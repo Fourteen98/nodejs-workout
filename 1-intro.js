@@ -7,4 +7,13 @@
 // process - info about env where the program is being executed
 
 console.log(process);
+const amount = 12;
+
+if (amount < 10) {
+  console.log('small number');
+} else {
+  console.log('large number');
+}
+
+console.log('hey it is my first node app');
 

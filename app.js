@@ -1,9 +1,9 @@
-const amount = 12;
+const names = require('./4-names');
+const sayHi = require('./5-utils');
+const data = require('./6-alternative-flavor');
 
-if (amount < 10) {
-  console.log('small number');
-} else {
-  console.log('large number');
-}
+console.log(data);
 
-console.log('hey it is my first node app');
+sayHi('susan');
+sayHi(names.peter);
+sayHi(names.john);
