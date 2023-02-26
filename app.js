@@ -1,8 +1,14 @@
-const os = require('os');
+const { readFileSync, writeFileSync } = require('fs');
 
-// info about current user
-const user = os.userInfo();
-console.log(user);
+const first = readFileSync('./content/first.txt', 'utf-8');
+const second = readFileSync('./content/second.txt', 'utf-8');
 
-// method returns the system uptime in seconds
-console.log(`The System Uptime is ${os.uptime()} seconds`);
+console.log(first);
+console.log(second);
+
+writeFileSync(
+  './content/result-sync.txt',
+  `Here is the result: ${first}, ${second}`,
+  {flag: 'a'}
+);
+
