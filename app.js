@@ -1,9 +1,8 @@
-const names = require('./4-names');
-const sayHi = require('./5-utils');
-const data = require('./6-alternative-flavor');
+const os = require('os');
 
-console.log(data);
+// info about current user
+const user = os.userInfo();
+console.log(user);
 
-sayHi('susan');
-sayHi(names.peter);
-sayHi(names.john);
+// method returns the system uptime in seconds
+console.log(`The System Uptime is ${os.uptime()} seconds`);
